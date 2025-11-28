@@ -116,7 +116,8 @@ export const CreativeInput: React.FC<Props> = ({
             const libraryItem = optionMap.get(segment);
 
             const displayLabel = isLibrary 
-                ? (lang === 'CN' ? libraryItem.labelCN : libraryItem.labelEN)
+                // ✅ 修复后的代码 (加了问号和保底值)
+                ? (lang === 'CN' ? libraryItem?.labelCN || "" : libraryItem?.labelEN || "")
                 : (lang === 'CN' ? '自定义' : 'Custom');
 
             const displayValue = isLibrary ? libraryItem.prompt : segment;
