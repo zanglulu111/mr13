@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-
+export const maxDuration = 60;
 // --- 系统指令 (保持不变) ---
 const MASTER_SYSTEM_INSTRUCTION = `
 ROLE: You are a World-Class AI Visual Director and Prompt Engineer (Bilingual: English/Chinese).
