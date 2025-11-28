@@ -120,7 +120,7 @@ export const CreativeInput: React.FC<Props> = ({
                 ? (lang === 'CN' ? libraryItem?.labelCN || "" : libraryItem?.labelEN || "")
                 : (lang === 'CN' ? '自定义' : 'Custom');
 
-            const displayValue = isLibrary ? libraryItem.prompt : segment;
+            const displayValue = isLibrary ? libraryItem?.prompt || "" : segment;
 
             return (
               <div 
